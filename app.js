@@ -35,7 +35,7 @@
     var heroSources = [
       'assets/videos/demo1.mp4',
       'assets/videos/demo6.mp4',
-      'assets/videos/demo8.mp4'
+      'assets/videos/sweets.mp4'
     ];
     var heroIndex = 0;
     heroVideo.addEventListener('ended', function () {
