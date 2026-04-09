@@ -29,6 +29,22 @@
     header.classList.toggle('scrolled', window.scrollY > 50);
   });
 
+  // --- ヒーロー背景動画ローテーション ---
+  var heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    var heroSources = [
+      'assets/videos/demo1.mp4',
+      'assets/videos/demo6.mp4',
+      'assets/videos/demo8.mp4'
+    ];
+    var heroIndex = 0;
+    heroVideo.addEventListener('ended', function () {
+      heroIndex = (heroIndex + 1) % heroSources.length;
+      heroVideo.src = heroSources[heroIndex];
+      heroVideo.play();
+    });
+  }
+
   // --- 動画カードホバー再生 ---
   document.querySelectorAll('.video-card, .video-card-thumb').forEach(function (card) {
     var video = card.querySelector('video');
