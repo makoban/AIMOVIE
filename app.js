@@ -82,6 +82,7 @@
     document.body.style.overflow = '';
     modalVideo.pause();
     modalVideo.currentTime = 0;
+    modalVideo.removeAttribute('controls');
   }
 
   // video-card (CM section)
@@ -96,6 +97,15 @@
     card.addEventListener('click', function () {
       openModal(this.getAttribute('data-video'));
     });
+  });
+
+  // モーダル動画タップでコントローラー表示切替
+  modalVideo.addEventListener('click', function () {
+    if (modalVideo.hasAttribute('controls')) {
+      modalVideo.removeAttribute('controls');
+    } else {
+      modalVideo.setAttribute('controls', '');
+    }
   });
 
   document.querySelector('.modal-close').addEventListener('click', closeModal);
