@@ -108,7 +108,11 @@
     }
   });
 
-  document.querySelector('.modal-backdrop').addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal || e.target.classList.contains('modal-backdrop')) {
+      closeModal();
+    }
+  });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
   });
