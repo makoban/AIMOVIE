@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI映像制作 | BANTEX</title>
-    <meta name="description" content="AIが生み出す、新時代の映像制作。BANTEX社のAI映像制作サービスのサンプルギャラリー。">
+    <title>AI映像制作 | BANTEX - AI映像＆AI音声をあなたのもとに</title>
+    <meta name="description" content="ハイクオリティなAI映像を市場価格の1/10で。即日納品可能。BANTEX社のAI映像制作サービス。">
+    <meta property="og:title" content="AI映像制作 | BANTEX">
+    <meta property="og:description" content="AI映像＆AI音声をあなたのもとに。市場価格1/10、即日納品。">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
     <!-- v1.0 -->
 </head>
 <body>
+
     <!-- ヘッダー -->
     <header class="header">
         <nav class="nav">
-            <div class="nav-brand">
+            <a href="#" class="nav-brand">
                 <span class="logo">BANTEX</span>
                 <span class="badge">v1.0</span>
-            </div>
+            </a>
             <ul class="nav-links">
-                <li><a href="#gallery">ギャラリー</a></li>
-                <li><a href="#features">特徴</a></li>
-                <li><a href="#usecases">活用シーン</a></li>
-                <li><a href="#contact" class="btn-nav">お問い合わせ</a></li>
+                <li><a href="#video">映像制作</a></li>
+                <li><a href="#cm">CM制作</a></li>
+                <li><a href="#sns">SNS動画</a></li>
+                <li><a href="#pricing">料金</a></li>
+                <li><a href="https://lin.ee/QvSnFae" class="btn-nav" target="_blank" rel="noopener">LINEで問い合わせ</a></li>
             </ul>
             <button class="hamburger" aria-label="メニュー">
                 <span></span><span></span><span></span>
@@ -28,340 +33,481 @@
         </nav>
     </header>
 
-    <!-- ヒーロー -->
+    <!-- ===== ヒーロー ===== -->
     <section class="hero">
         <div class="hero-bg">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="デモ１.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline class="hero-video" poster="assets/thumbs/demo1.jpg">
+                <source src="assets/videos/demo1.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
+            <div class="hero-tag">AI Movie &amp; Voice Production</div>
+            <div class="hero-badges">
+                <span class="hero-badge">音声&amp;BGM付</span>
+                <span class="hero-badge">商用利用可能</span>
+            </div>
             <h1 class="hero-title">
-                <span class="hero-sub">AI Movie Production</span>
-                AIが創る、<br>次世代の映像体験
+                AIムービーを<br>
+                <span class="gradient-text">あなたの手にも</span>
             </h1>
-            <p class="hero-desc">テキスト指示だけで、プロ品質の映像を自動生成。<br>企業PR・SNS・広告・ニュース、あらゆるシーンに対応。</p>
+            <p class="hero-desc">
+                プロ品質の映像をAIで制作。<br>
+                撮影・モデル・スタジオ、すべて不要の新時代へ。<br>
+                しかも<strong class="hero-price">6万円〜10万円<small>（税込）</small></strong>という驚愕プライス。安心の価格固定。
+            </p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">1/10</span>
+                    <span class="hero-stat-label">市場価格比</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">即日</span>
+                    <span class="hero-stat-label">納品スピード</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">200<small>本+</small></span>
+                    <span class="hero-stat-label">制作実績</span>
+                </div>
+            </div>
             <div class="hero-actions">
-                <a href="#gallery" class="btn btn-primary">サンプルを見る</a>
-                <a href="#contact" class="btn btn-outline">相談する</a>
+                <a href="#video" class="btn btn-primary">制作事例を見る</a>
+                <a href="#pricing" class="btn btn-glass">料金を確認</a>
             </div>
         </div>
-        <div class="scroll-indicator">
+        <div class="scroll-hint">
+            <div class="scroll-mouse"><div class="scroll-dot"></div></div>
             <span>Scroll</span>
-            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- 実績数字 -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="500">0</span><span class="stat-unit">本+</span>
-                    <span class="stat-label">制作実績</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="90">0</span><span class="stat-unit">%</span>
-                    <span class="stat-label">コスト削減</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="10">0</span><span class="stat-unit">分</span>
-                    <span class="stat-label">最短納品</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="24">0</span><span class="stat-unit">h</span>
-                    <span class="stat-label">対応可能</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ギャラリー -->
-    <section id="gallery" class="gallery">
+    <!-- ===== 映像制作カテゴリ ===== -->
+    <section id="video" class="section section-dark">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Gallery</span>
-                <h2 class="section-title">AI生成映像サンプル</h2>
-                <p class="section-desc">すべてAIで生成された映像です。クリックして再生できます。</p>
+                <span class="section-tag">Video Production</span>
+                <h2 class="section-title">映像制作</h2>
+                <p class="section-lead">テキスト指示から、イメージ通りの映像を生成。企業PVから製品デモまで。</p>
             </div>
-
-            <!-- フィルター -->
-            <div class="gallery-filter">
-                <button class="filter-btn active" data-filter="all">すべて</button>
-                <button class="filter-btn" data-filter="news">ニュース</button>
-                <button class="filter-btn" data-filter="commercial">CM・広告</button>
-                <button class="filter-btn" data-filter="demo">デモ</button>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-item" data-category="commercial" data-video="AIサプリ.mp4">
-                    <div class="gallery-thumb">
-                        <img src="AIサプリ.jpg" alt="AIサプリメント紹介動画" loading="lazy">
+            <div class="video-grid">
+                <div class="video-showcase-card" data-video="assets/videos/demo1.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/demo1.jpg">
+                            <source src="assets/videos/demo1.mp4" type="video/mp4">
+                        </video>
                         <div class="play-overlay">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
                         </div>
-                        <span class="gallery-duration">0:30</span>
                     </div>
-                    <div class="gallery-info">
-                        <h3>AIサプリメント紹介</h3>
-                        <p>商品PR動画をAIで自動生成。テキスト指示のみで完成。</p>
-                        <div class="gallery-tags">
-                            <span class="tag">商品PR</span>
-                            <span class="tag">広告</span>
-                        </div>
+                    <div class="video-card-info">
+                        <h3>映像デモ Vol.1</h3>
+                        <p>AI映像生成のクオリティを示すデモンストレーション。テキストのみで指示。</p>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="news" data-video="コアラニュース１.MOV">
-                    <div class="gallery-thumb">
-                        <div class="thumb-placeholder news-thumb">
-                            <svg viewBox="0 0 24 24" fill="white" width="48"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
-                        </div>
+                <div class="video-showcase-card" data-video="assets/videos/demo2.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/demo2.jpg">
+                            <source src="assets/videos/demo2.mp4" type="video/mp4">
+                        </video>
                         <div class="play-overlay">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
                         </div>
-                        <span class="gallery-duration">1:00</span>
                     </div>
-                    <div class="gallery-info">
-                        <h3>AIニュースキャスター Vol.1</h3>
-                        <p>AIアバターが原稿を読み上げるニュース映像。</p>
-                        <div class="gallery-tags">
-                            <span class="tag">ニュース</span>
-                            <span class="tag">AIアバター</span>
-                        </div>
+                    <div class="video-card-info">
+                        <h3>映像デモ Vol.2</h3>
+                        <p>異なるスタイルでの映像生成。シーンの空気感まで自在にコントロール。</p>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="news" data-video="コアラニュース２.mp4">
-                    <div class="gallery-thumb">
-                        <div class="thumb-placeholder news-thumb">
-                            <svg viewBox="0 0 24 24" fill="white" width="48"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
-                        </div>
+                <div class="video-showcase-card" data-video="assets/videos/demo3.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/demo3.jpg">
+                            <source src="assets/videos/demo3.mp4" type="video/mp4">
+                        </video>
                         <div class="play-overlay">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
                         </div>
-                        <span class="gallery-duration">1:00</span>
                     </div>
-                    <div class="gallery-info">
-                        <h3>AIニュースキャスター Vol.2</h3>
-                        <p>異なるスタイルのAIニュース映像。カスタマイズ自在。</p>
-                        <div class="gallery-tags">
-                            <span class="tag">ニュース</span>
-                            <span class="tag">AIアバター</span>
-                        </div>
+                    <div class="video-card-info">
+                        <h3>映像デモ Vol.3</h3>
+                        <p>多彩な表現力。ブランドの世界観をAIが忠実に再現。</p>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="demo" data-video="デモ１.mp4">
-                    <div class="gallery-thumb">
-                        <div class="thumb-placeholder demo-thumb">
-                            <svg viewBox="0 0 24 24" fill="white" width="48"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
-                        </div>
+                <div class="video-showcase-card" data-video="assets/videos/demo4.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/demo4.jpg">
+                            <source src="assets/videos/demo4.mp4" type="video/mp4">
+                        </video>
                         <div class="play-overlay">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
                         </div>
-                        <span class="gallery-duration">0:45</span>
                     </div>
-                    <div class="gallery-info">
-                        <h3>AI映像デモ Vol.1</h3>
-                        <p>AI映像生成の可能性を示すデモンストレーション。</p>
-                        <div class="gallery-tags">
-                            <span class="tag">デモ</span>
-                            <span class="tag">技術紹介</span>
-                        </div>
+                    <div class="video-card-info">
+                        <h3>映像デモ Vol.4</h3>
+                        <p>ダイナミックな映像表現。従来では高コストだったシーンもAIで実現。</p>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="demo" data-video="デモ２.mp4">
-                    <div class="gallery-thumb">
-                        <div class="thumb-placeholder demo-thumb">
-                            <svg viewBox="0 0 24 24" fill="white" width="48"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
-                        </div>
+                <div class="video-showcase-card" data-video="assets/videos/demo5.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/demo5.jpg">
+                            <source src="assets/videos/demo5.mp4" type="video/mp4">
+                        </video>
                         <div class="play-overlay">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
                         </div>
-                        <span class="gallery-duration">0:45</span>
                     </div>
-                    <div class="gallery-info">
-                        <h3>AI映像デモ Vol.2</h3>
-                        <p>さらに進化したAI映像のクオリティをご覧ください。</p>
-                        <div class="gallery-tags">
-                            <span class="tag">デモ</span>
-                            <span class="tag">最新技術</span>
-                        </div>
+                    <div class="video-card-info">
+                        <h3>映像デモ Vol.5</h3>
+                        <p>繊細なディテール表現。質感やライティングまでAIが最適化。</p>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="demo" data-video="デモ7.mp4">
-                    <div class="gallery-thumb">
-                        <div class="thumb-placeholder demo-thumb">
-                            <svg viewBox="0 0 24 24" fill="white" width="48"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
-                        </div>
+                <div class="video-showcase-card" data-video="assets/videos/demo6.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/demo6.jpg">
+                            <source src="assets/videos/demo6.mp4" type="video/mp4">
+                        </video>
                         <div class="play-overlay">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
                         </div>
-                        <span class="gallery-duration">0:45</span>
                     </div>
-                    <div class="gallery-info">
-                        <h3>AI映像デモ Vol.7</h3>
+                    <div class="video-card-info">
+                        <h3>映像デモ Vol.6</h3>
+                        <p>最新AI技術による映像生成。あらゆるジャンルに対応。</p>
+                    </div>
+                </div>
+                <div class="video-showcase-card" data-video="assets/videos/demo7.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/demo7.jpg">
+                            <source src="assets/videos/demo7.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                        </div>
+                    </div>
+                    <div class="video-card-info">
+                        <h3>映像デモ Vol.7</h3>
                         <p>最新AIによる高品質映像デモンストレーション。</p>
-                        <div class="gallery-tags">
-                            <span class="tag">デモ</span>
-                            <span class="tag">最新技術</span>
-                        </div>
                     </div>
                 </div>
-
-                <div class="gallery-item" data-category="demo" data-video="デモ8.mp4">
-                    <div class="gallery-thumb">
-                        <div class="thumb-placeholder demo-thumb">
-                            <svg viewBox="0 0 24 24" fill="white" width="48"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
-                        </div>
+                <div class="video-showcase-card" data-video="assets/videos/demo8.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/demo8.jpg">
+                            <source src="assets/videos/demo8.mp4" type="video/mp4">
+                        </video>
                         <div class="play-overlay">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
                         </div>
-                        <span class="gallery-duration">0:45</span>
                     </div>
-                    <div class="gallery-info">
-                        <h3>AI映像デモ Vol.8</h3>
+                    <div class="video-card-info">
+                        <h3>映像デモ Vol.8</h3>
                         <p>進化し続けるAI映像技術の最新サンプル。</p>
-                        <div class="gallery-tags">
-                            <span class="tag">デモ</span>
-                            <span class="tag">最新技術</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CM制作カテゴリ ===== -->
+    <section id="cm" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Commercial</span>
+                <h2 class="section-title">CM制作</h2>
+                <p class="section-lead">商品画像<strong>たった1枚</strong>から、このクオリティの動画を制作します。</p>
+            </div>
+
+            <div class="cm-showcase">
+                <!-- ワンピース -->
+                <div class="cm-item">
+                    <div class="cm-flow">
+                        <div class="cm-before">
+                            <span class="cm-label">元画像</span>
+                            <img src="assets/images/fashion.jpg" alt="ワンピース商品画像" loading="lazy">
                         </div>
+                        <div class="cm-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            <span>AI生成</span>
+                        </div>
+                        <div class="cm-after">
+                            <span class="cm-label">完成動画</span>
+                            <div class="video-card" data-video="assets/videos/fashion.mp4">
+                                <video muted loop playsinline preload="metadata" poster="assets/thumbs/fashion.jpg">
+                            <source src="assets/videos/fashion.mp4" type="video/mp4">
+                                </video>
+                                <div class="play-overlay">
+                                    <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cm-caption">
+                        <h3>ファッション動画</h3>
+                        <p>モデル不要。商品画像1枚から自然な着用イメージ動画を生成。ECサイトのCVR向上に。</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="commercial" data-video="服.mp4">
-                    <div class="gallery-thumb">
-                        <img src="ワンピース.jpg" alt="AIファッション動画" loading="lazy">
+                <!-- サプリ -->
+                <div class="cm-item">
+                    <div class="cm-flow">
+                        <div class="cm-before">
+                            <span class="cm-label">元画像</span>
+                            <img src="assets/images/supplement.jpg" alt="サプリメント商品画像" loading="lazy">
+                        </div>
+                        <div class="cm-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            <span>AI生成</span>
+                        </div>
+                        <div class="cm-after">
+                            <span class="cm-label">完成動画</span>
+                            <div class="video-card" data-video="assets/videos/supplement.mp4">
+                                <video muted loop playsinline preload="metadata" poster="assets/thumbs/supplement.jpg">
+                            <source src="assets/videos/supplement.mp4" type="video/mp4">
+                                </video>
+                                <div class="play-overlay">
+                                    <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cm-caption">
+                        <h3>サプリメント広告</h3>
+                        <p>商品パッケージ画像からリッチなプロモーション動画を自動生成。広告クリエイティブの量産に。</p>
+                    </div>
+                </div>
+
+                <!-- 自転車 -->
+                <div class="cm-item">
+                    <div class="cm-flow">
+                        <div class="cm-before">
+                            <span class="cm-label">元画像</span>
+                            <img src="assets/images/bicycle.jpg" alt="自転車商品画像" loading="lazy">
+                        </div>
+                        <div class="cm-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            <span>AI生成</span>
+                        </div>
+                        <div class="cm-after">
+                            <span class="cm-label">完成動画</span>
+                            <div class="video-card" data-video="assets/videos/bicycle.mp4">
+                                <video muted loop playsinline preload="metadata" poster="assets/thumbs/bicycle.jpg">
+                            <source src="assets/videos/bicycle.mp4" type="video/mp4">
+                                </video>
+                                <div class="play-overlay">
+                                    <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cm-caption">
+                        <h3>自転車プロモーション</h3>
+                        <p>製品写真1枚から躍動感あるプロモーション動画を生成。ECやSNS広告に最適。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SNS動画カテゴリ ===== -->
+    <section id="sns" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SNS Contents</span>
+                <h2 class="section-title">SNS動画</h2>
+                <p class="section-lead">AIアバターがニュースを読み上げ。SNS用の短尺コンテンツを大量生産。</p>
+            </div>
+            <div class="video-grid">
+                <div class="video-showcase-card" data-video="assets/videos/news1.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/news1.jpg">
+                            <source src="assets/videos/news1.mp4" type="video/mp4">
+                        </video>
                         <div class="play-overlay">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-                        </div>
-                        <span class="gallery-duration">0:30</span>
-                    </div>
-                    <div class="gallery-info">
-                        <h3>AIファッション動画</h3>
-                        <p>アパレル商品のAI映像。モデル不要で商品映像を制作。</p>
-                        <div class="gallery-tags">
-                            <span class="tag">ファッション</span>
-                            <span class="tag">EC</span>
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
                         </div>
                     </div>
+                    <div class="video-card-info">
+                        <h3>AIニュース Vol.1</h3>
+                        <p>AIキャラクターによるニュース動画。原稿テキストを入力するだけで動画完成。</p>
+                    </div>
+                </div>
+                <div class="video-showcase-card" data-video="assets/videos/news2.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/news2.jpg">
+                            <source src="assets/videos/news2.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                        </div>
+                    </div>
+                    <div class="video-card-info">
+                        <h3>AIニュース Vol.2</h3>
+                        <p>異なるキャラクター・スタイルで展開可能。ブランドに合わせたカスタマイズも。</p>
+                    </div>
+                </div>
+                <div class="video-showcase-card" data-video="assets/videos/sns1.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/sns1.jpg">
+                            <source src="assets/videos/sns1.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                        </div>
+                    </div>
+                    <div class="video-card-info">
+                        <h3>SNS動画 Vol.1</h3>
+                        <p>SNS向けショート動画。スクロールを止める、インパクトある映像を自動生成。</p>
+                    </div>
+                </div>
+                <div class="video-showcase-card" data-video="assets/videos/sns2.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/sns2.jpg">
+                            <source src="assets/videos/sns2.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                        </div>
+                    </div>
+                    <div class="video-card-info">
+                        <h3>SNS動画 Vol.2</h3>
+                        <p>TikTok・Reels・ショート対応。縦型・横型どちらも制作可能。</p>
+                    </div>
+                </div>
+                <div class="video-showcase-card" data-video="assets/videos/sns3.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/sns3.jpg">
+                            <source src="assets/videos/sns3.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                        </div>
+                    </div>
+                    <div class="video-card-info">
+                        <h3>SNS動画 Vol.3</h3>
+                        <p>目を引くエフェクトとテンポで、フィード上での視聴完了率を最大化。</p>
+                    </div>
+                </div>
+                <div class="video-showcase-card" data-video="assets/videos/sns4.mp4">
+                    <div class="video-card-thumb">
+                        <video muted loop playsinline preload="metadata" poster="assets/thumbs/sns4.jpg">
+                            <source src="assets/videos/sns4.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-overlay">
+                            <div class="play-btn"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                        </div>
+                    </div>
+                    <div class="video-card-info">
+                        <h3>SNS動画 Vol.4</h3>
+                        <p>ブランドの世界観を短尺で凝縮。広告配信にそのまま使える品質。</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 特徴 -->
-    <section id="features" class="features">
+    <!-- ===== 価格表 ===== -->
+    <section id="pricing" class="section pricing-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Features</span>
-                <h2 class="section-title">AI映像制作の強み</h2>
+                <span class="section-tag">Pricing</span>
+                <h2 class="section-title">映像業界の<span class="gradient-text">価格破壊</span></h2>
+                <p class="section-lead">従来の映像制作は数十万〜数百万。AIなら、この価格で。</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+
+            <div class="pricing-comparison">
+                <div class="pricing-old">
+                    <h3>従来の映像制作</h3>
+                    <div class="pricing-old-items">
+                        <div class="pricing-old-item">
+                            <span>撮影</span><span>15万円〜</span>
+                        </div>
+                        <div class="pricing-old-item">
+                            <span>モデル</span><span>5万円〜</span>
+                        </div>
+                        <div class="pricing-old-item">
+                            <span>映像企画費</span><span>10万円〜</span>
+                        </div>
+                        <div class="pricing-old-item">
+                            <span>音制作</span><span>10万円〜</span>
+                        </div>
+                        <div class="pricing-old-item">
+                            <span>編集</span><span>20万円〜</span>
+                        </div>
+                        <div class="pricing-old-item">
+                            <span>ナレーション</span><span>3万円〜</span>
+                        </div>
+                        <div class="pricing-old-total">
+                            <span>合計</span><span>63万円〜</span>
+                        </div>
                     </div>
-                    <h3>圧倒的スピード</h3>
-                    <p>従来の映像制作は数週間。AIなら最短10分で初稿が完成。修正も即座に反映。</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+
+                <div class="pricing-vs">VS</div>
+
+                <div class="pricing-new">
+                    <div class="pricing-new-badge">AI映像制作</div>
+                    <div class="pricing-cards">
+                        <div class="price-card">
+                            <div class="price-duration">5秒</div>
+                            <div class="price-amount"><small>¥</small>60,000</div>
+                            <ul class="price-features">
+                                <li>SNS広告に最適</li>
+                                <li>バナー動画</li>
+                                <li>即日納品可</li>
+                            </ul>
+                        </div>
+                        <div class="price-card popular">
+                            <div class="price-popular-tag">人気</div>
+                            <div class="price-duration">10秒</div>
+                            <div class="price-amount"><small>¥</small>80,000</div>
+                            <ul class="price-features">
+                                <li>CM・Web広告に最適</li>
+                                <li>商品紹介</li>
+                                <li>即日納品可</li>
+                            </ul>
+                        </div>
+                        <div class="price-card">
+                            <div class="price-duration">15秒</div>
+                            <div class="price-amount"><small>¥</small>100,000</div>
+                            <ul class="price-features">
+                                <li>TVCM級クオリティ</li>
+                                <li>企業PV・ブランド映像</li>
+                                <li>即日納品可</li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3>コスト90%削減</h3>
-                    <p>撮影・スタジオ・モデル・編集者が不要。テキスト指示だけで映像が完成。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-                    </div>
-                    <h3>多彩なスタイル</h3>
-                    <p>ニュース、CM、SNS動画、商品PR。用途に合わせたスタイルを自在に選択。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </div>
-                    <h3>テキスト指示のみ</h3>
-                    <p>専門知識は不要。作りたい映像を日本語で指示するだけ。AIが最適な映像を生成。</p>
+                    <p class="pricing-note">※ 上記は税込価格です。安心の価格固定。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 活用シーン -->
-    <section id="usecases" class="usecases">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Use Cases</span>
-                <h2 class="section-title">こんなシーンで活躍</h2>
-            </div>
-            <div class="usecases-grid">
-                <div class="usecase-card">
-                    <div class="usecase-number">01</div>
-                    <h3>企業PR・会社紹介</h3>
-                    <p>採用動画や企業紹介をAIで手軽に。更新も簡単なので常に最新の情報を発信。</p>
-                </div>
-                <div class="usecase-card">
-                    <div class="usecase-number">02</div>
-                    <h3>SNS・広告動画</h3>
-                    <p>Instagram、TikTok、YouTube用の短尺動画を大量生産。ABテストも容易。</p>
-                </div>
-                <div class="usecase-card">
-                    <div class="usecase-number">03</div>
-                    <h3>EC・商品紹介</h3>
-                    <p>商品画像からAIが動画を自動生成。モデルやスタジオ不要でコスト大幅削減。</p>
-                </div>
-                <div class="usecase-card">
-                    <div class="usecase-number">04</div>
-                    <h3>ニュース・情報発信</h3>
-                    <p>AIアバターが原稿を読み上げ。社内報やニュースレターを動画化。</p>
-                </div>
-                <div class="usecase-card">
-                    <div class="usecase-number">05</div>
-                    <h3>教育・研修</h3>
-                    <p>マニュアル動画やeラーニング素材をAIで効率的に制作。多言語対応も可能。</p>
-                </div>
-                <div class="usecase-card">
-                    <div class="usecase-number">06</div>
-                    <h3>不動産・物件紹介</h3>
-                    <p>物件写真からバーチャルツアー動画を自動生成。内見率アップに貢献。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
+    <!-- ===== CTA ===== -->
     <section id="contact" class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2>AI映像制作を、<br>はじめてみませんか？</h2>
-                <p>まずは無料相談から。御社に最適なAI映像活用プランをご提案します。</p>
+                <h2>映像制作の常識を、<br><span class="gradient-text">AIで変えませんか？</span></h2>
+                <p>まずは無料相談から。御社の映像ニーズに最適なプランをご提案します。</p>
                 <div class="cta-actions">
-                    <a href="https://bantex.jp/ai-services.html" class="btn btn-primary btn-lg" target="_blank" rel="noopener">サービス一覧を見る</a>
-                    <a href="mailto:info@bantex.jp" class="btn btn-outline btn-lg">メールで相談</a>
+                    <a href="https://lin.ee/QvSnFae" class="btn btn-line btn-lg" target="_blank" rel="noopener">LINEで問い合わせ</a>
+                    <a href="mailto:info@bantex.jp" class="btn btn-glass btn-lg">メールで相談</a>
                 </div>
-                <p class="cta-note">* 初回相談無料 / 最短即日対応</p>
+                <p class="cta-note">初回相談無料 / 最短即日対応</p>
             </div>
         </div>
     </section>
 
-    <!-- フッター -->
+    <!-- ===== フッター ===== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-top">
                 <div class="footer-brand">
                     <span class="logo">BANTEX</span>
                     <p>AIテクノロジーで、ビジネスを加速する。</p>
                 </div>
                 <div class="footer-links">
                     <a href="https://bantex.jp/" target="_blank">会社概要</a>
-                    <a href="https://bantex.jp/ai-services.html" target="_blank">AIサービス一覧</a>
+                    <a href="https://bantex.jp/ai-services.html" target="_blank">AIサービス</a>
                     <a href="https://bantex.jp/terms.html" target="_blank">利用規約</a>
                     <a href="https://bantex.jp/privacy.html" target="_blank">プライバシーポリシー</a>
                     <a href="https://bantex.jp/tokushoho.html" target="_blank">特定商取引法</a>
@@ -373,18 +519,14 @@
         </div>
     </footer>
 
-    <!-- 動画モーダル -->
+    <!-- ===== 動画モーダル ===== -->
     <div class="modal" id="videoModal">
         <div class="modal-backdrop"></div>
-        <div class="modal-content">
+        <div class="modal-body">
             <button class="modal-close" aria-label="閉じる">&times;</button>
             <video id="modalVideo" controls playsinline>
                 <source id="modalSource" src="" type="video/mp4">
             </video>
-            <div class="modal-info">
-                <h3 id="modalTitle"></h3>
-                <p id="modalDesc"></p>
-            </div>
         </div>
     </div>
 
