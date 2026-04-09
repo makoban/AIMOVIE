@@ -1,4 +1,4 @@
-// BANTEX AI映像制作 LP v1.1
+// BANTEX AI映像制作 LP v1.2
 
 (function () {
   'use strict';
@@ -108,7 +108,6 @@
     }
   });
 
-  document.querySelector('.modal-close').addEventListener('click', closeModal);
   document.querySelector('.modal-backdrop').addEventListener('click', closeModal);
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
