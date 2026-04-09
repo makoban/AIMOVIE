@@ -39,9 +39,15 @@
     ];
     var heroIndex = 0;
     heroVideo.addEventListener('ended', function () {
-      heroIndex = (heroIndex + 1) % heroSources.length;
-      heroVideo.src = heroSources[heroIndex];
-      heroVideo.play();
+      heroVideo.style.opacity = '0';
+      setTimeout(function () {
+        heroIndex = (heroIndex + 1) % heroSources.length;
+        heroVideo.src = heroSources[heroIndex];
+        heroVideo.play();
+      }, 500);
+    });
+    heroVideo.addEventListener('playing', function () {
+      heroVideo.style.opacity = '1';
     });
   }
 
