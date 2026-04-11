@@ -30,6 +30,7 @@ ul{list-style:none}
 
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 .gradient-text{background:linear-gradient(135deg,var(--primary-light),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nowrap{display:inline-block}
 
 /* ===== Header ===== */
 .header{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:var(--transition)}
