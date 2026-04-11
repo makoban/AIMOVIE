@@ -1,4 +1,4 @@
-// BANTEX AI映像制作 LP v1.2
+// BANTEX AI映像制作 LP v1.3
 
 (function () {
   'use strict';
