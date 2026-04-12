@@ -31,24 +31,34 @@
 
   // --- ヒーロー背景動画ローテーション ---
   var heroVideo = document.querySelector('.hero-video');
+  var isMobile = window.innerWidth <= 768;
   if (heroVideo) {
-    var heroSources = [
-      'assets/videos/demo1.mp4',
-      'assets/videos/demo6.mp4',
-      'assets/videos/sweets.mp4'
-    ];
-    var heroIndex = 0;
-    heroVideo.addEventListener('ended', function () {
-      heroVideo.style.opacity = '0';
-      setTimeout(function () {
-        heroIndex = (heroIndex + 1) % heroSources.length;
-        heroVideo.src = heroSources[heroIndex];
-        heroVideo.play();
-      }, 500);
-    });
-    heroVideo.addEventListener('playing', function () {
+    if (isMobile) {
+      // スマホ: 静止画のみ（動画読み込みしない）
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.pause();
       heroVideo.style.opacity = '1';
-    });
+    } else {
+      // PC: 動画ローテーション
+      heroVideo.preload = 'auto';
+      var heroSources = [
+        'assets/videos/demo1.mp4',
+        'assets/videos/demo6.mp4',
+        'assets/videos/sweets.mp4'
+      ];
+      var heroIndex = 0;
+      heroVideo.addEventListener('ended', function () {
+        heroVideo.style.opacity = '0';
+        setTimeout(function () {
+          heroIndex = (heroIndex + 1) % heroSources.length;
+          heroVideo.src = heroSources[heroIndex];
+          heroVideo.play();
+        }, 500);
+      });
+      heroVideo.addEventListener('playing', function () {
+        heroVideo.style.opacity = '1';
+      });
+    }
   }
 
   // --- 動画カードホバー再生 ---
@@ -115,6 +125,23 @@
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+  });
+
+  // --- 動画 lazy load（スクロールで近づいたらメタデータ読み込み） ---
+  var videoObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var video = entry.target;
+        video.preload = 'metadata';
+        videoObserver.unobserve(video);
+      }
+    });
+  }, { rootMargin: '200px' });
+
+  document.querySelectorAll('video[preload="none"]').forEach(function (v) {
+    if (!v.classList.contains('hero-video')) {
+      videoObserver.observe(v);
+    }
   });
 
   // --- スクロールアニメーション ---
